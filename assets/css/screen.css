@@ -127,7 +127,7 @@ body {
 }
 /* line 48, ../../sass/partials/_layout.scss */
 #bbContentWrapper .container > .section .media .media-body {
-  padding: 15px 15px 15px 0;
+  padding: 15px 15px 0 0;
 }
 /* line 51, ../../sass/partials/_layout.scss */
 #bbContentWrapper .container > .section .media .media-body .badge {
