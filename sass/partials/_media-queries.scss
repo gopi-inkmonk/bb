@@ -1,0 +1,38 @@
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+  .enq-form-label {
+    position: static;
+    margin-bottom: 30px;
+  }
+  .media {
+    flex-direction: column;
+
+    & > img {
+      width: 100%;
+    }
+    & > .media-body {
+      padding: 30px !important;
+    }
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767px) {
+  .nav-help {
+    display: none;
+  }
+  nav.navbar {
+    margin-bottom: 0;
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991px) {
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199px) {
+}
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width

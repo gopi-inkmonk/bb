@@ -1,0 +1,130 @@
+.nav-help {
+  display: flex;
+  justify-content: space-between;
+  color: rgba($darker-color, 0.5);
+  padding: .5rem 1rem;
+  border-bottom: 1px solid rgba($darker-color, 0.15);
+
+  & a {
+    color: rgba($darker-color, 0.5);
+    font-size: 13px;
+  }
+
+  & > div:nth-child(2) {
+    & > a {
+      border-left: 1px solid rgba($darker-color, 0.15);
+      padding: .5rem 1rem;
+
+      & .fa {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+nav.navbar {
+  z-index: 9;
+  margin-bottom: -40px;
+
+  & .navbar-toggler {
+    outline: none !important;
+
+    &.collapsed {
+      .navbar-toggler-icon:before {
+        content: "\f0c9";
+      }
+    }
+    .navbar-toggler-icon {
+      font-family: FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      &:before {
+        content: "\f00d";
+      }
+    }
+  }
+
+  & ul.navbar-nav {
+    & > li.nav-item {
+      margin: 0 0.5rem;
+
+      &.active {
+        background: $primary-color;
+
+        & > a.nav-link {
+          color: $lighter-color;
+        }
+      }
+      & > a.nav-link {
+        color: $darker-color;
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        padding: 0.5rem 0.7rem;
+      }
+    }
+  }
+}
+
+.carousel {
+  & .carousel-inner {
+    & .carousel-item {
+      & .carousel-caption {
+        background: rgba($lighter-color, 0.75);
+        color: $darker-color;
+        text-align: left;
+        padding: 30px;
+        max-width: 460px;
+        bottom: 0;
+        top: 0;
+        margin: auto 0;
+        max-height: 180px;
+
+        & h3 {
+          font-size: 38px;
+          font-weight: 600;
+          display: inline-block;
+          margin: 0 0 10px;
+          line-height: 40px;
+        }
+        & p {
+          margin-bottom: 0;
+        }
+        & > a.btn.btn-primary {
+          position: absolute;
+          left: 0;
+          bottom: -45px;
+          padding: 14px;
+        }
+      }
+    }
+  }
+}
+
+.enq-form-label {
+  position: absolute;
+  left: 0;
+  top: -46px;
+
+  & > span {
+    background: #31383a;
+    padding: 15px;
+    color: rgba($lighter-color, 0.8);
+    font-size: 13px;
+    display: inline-block;
+
+    &:first-child {
+      background: $darker-color;
+      float: left;
+    }
+    &:nth-child(2) {
+      min-width: 150px;
+    }
+  }
+}

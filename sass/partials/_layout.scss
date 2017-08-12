@@ -1,0 +1,289 @@
+body {
+  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 16px;
+  color: $darker-color;
+  background: rgba($darker-color, 0.1);
+}
+
+#bbTopWrapper,
+#bbContentWrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+#bbTopWrapper {
+  background: $lighter-color;
+}
+
+#bbContentWrapper {
+  background: url('../images/footer-building.jpg') no-repeat center bottom
+    $light-color;
+  padding-bottom: 200px;
+  background-size: 100%;
+
+  & .container {
+    border: 1px solid rgba($darker-color, 0.2);
+
+    & > .section {
+      padding: 30px;
+      border-bottom: 1px solid rgba($darker-color, 0.2);
+      margin: 0 -15px;
+
+      &.bg-gradient {
+        @include background-image(linear-gradient($light-color, $light-color 50px, $lighter-color 150px, $lighter-color));
+      }
+
+      & .marginAuto {
+        margin: auto;
+      }
+
+      &.form {
+        padding-bottom: 0;
+      }
+
+      & .media {
+        border: 1px solid rgba($darker-color, 0.2);
+
+        & .media-body {
+          padding: 15px 15px 15px 0;
+
+          & .badge {
+            margin: 0 10px 15px 0;
+          }
+
+          & .nav {
+            margin: 25px 0 0 0;
+
+            & + .tab-content {
+              & .help-text {
+                color: $grey-color;
+                display: inline-block;
+              }
+              & .big-val {
+                font-size: 40px;
+                line-height: 44px;
+                font-weight: bold;
+                display: inline-block;
+                width: 100%;
+                margin: 0 0 15px;
+              }
+
+              & .btn {
+                min-width: 115px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav {
+  & .nav-link {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $grey-color;
+    line-height: 18px;
+
+    &.active {
+      border-bottom: 2px solid $primary-color;
+    }
+  }
+
+  & + .tab-content {
+    padding: 15px 0;
+  }
+}
+
+.container {
+  max-width: 940px;
+  background: $lighter-color;
+  position: relative;
+
+  &.rmbg {
+    background: none;
+    border: none !important;
+  }
+}
+
+form {
+  & .form-group {
+    margin-bottom: 30px;
+
+    & input,
+    & textarea {
+      @include border-radius(0);
+      border: none;
+      border-bottom: 1px solid $darker-color;
+
+      &:focus {
+        border-bottom: 1px solid $primary-color;
+      }
+    }
+  }
+  & .btn.btn-primary {
+    padding: 19px 10px;
+    margin-bottom: 30px;
+  }
+}
+
+.btn.btn-primary {
+  background: rgba($primary-color, 0.75);
+  color: $lighter-color;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 15px 10px;
+  @include border-radius(0);
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: rgba($primary-color, 1);
+  }
+}
+
+.divider {
+  border-top: 1px solid rgba($darker-color, 0.2);
+  margin: 0 -30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $darker-color;
+  font-weight: bold;
+  margin: 0 0 15px;
+}
+h2 {
+  font-size: 28px;
+  line-height: 34px;
+}
+h5 {
+  font-size: 16px;
+  line-height: 19px;
+}
+p {
+  color: $grey-color;
+  margin: 0 0 18px;
+}
+.badge {
+  font-size: 13px;
+  font-weight: normal;
+  padding: .25rem .4rem;
+}
+.cardSlider {
+  padding: 30px;
+
+  & .carousel-control-prev,
+  & .carousel-control-next {
+    @include opacity(1);
+    width: 60px;
+
+    & > span {
+      background-color: $darker-color;
+      padding: 16px 13px;
+    }
+  }
+
+  & .carousel-control-prev {
+    left: -30px;
+    justify-content: flex-start;
+  }
+  & .carousel-control-next {
+    right: -30px;
+    justify-content: flex-end;
+  }
+
+  .card {
+    &.project-card {
+      & .card-body {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 10px;
+
+        &:after {
+          content: "";
+          position: absolute;
+          @include background-image(linear-gradient(rgba($darker-color, 0), rgba($darker-color, 0) 0, rgba($darker-color, 0.7) 100%, rgba($darker-color, 0.7)));
+          top: -50px;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: 1;
+        }
+
+        & .card-title,
+        & .price,
+        & .card-text {
+          color: $lighter-color;
+          font-size: 16px;
+          line-height: 18px;
+          font-weight: normal;
+          margin: 0;
+          position: relative;
+          z-index: 9;
+        }
+
+        & .card-text {
+          font-size: 11px;
+          font-weight: bold;
+          text-transform: uppercase;
+          margin: 5px 0 0;
+          @include opacity(.7);
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  padding: 100px 0 0;
+
+  & .social-icons {
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0 0;
+
+    & a {
+      color: $darker-color;
+    }
+  }
+  & h6 {
+    margin: 0 0 25px;
+
+    & a {
+      color: $darker-color;
+    }
+  }
+  & p {
+  }
+  & ul {
+    margin: 0 0 25px;
+
+    & li {
+      & > span,
+      & > a {
+        padding: 5px 0;
+        display: inline-block;
+      }
+      & a {
+        color: $grey-color;
+      }
+    }
+  }
+}
+
+::selection {
+  background: $primary-color;
+  color: $lighter-color;
+}
