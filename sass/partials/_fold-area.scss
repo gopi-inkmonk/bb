@@ -128,3 +128,34 @@ nav.navbar {
     }
   }
 }
+
+.detailHeroWrapper {
+  padding: 30px;
+}
+.detailContentWrapper {
+  & h5 {
+    margin: 15px 0;
+  }
+
+  & ul {
+    color: $grey-color;
+
+    & li {
+      margin: 0 0 15px;
+      padding: 0 0 0 30px;
+      position: relative;
+
+      &:before {
+        content: "\f10c";
+        font-family: FontAwesome;
+        font-size: 11px;
+        position: absolute;
+        left: 10px;
+        top: 1px;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    }
+  }
+}
